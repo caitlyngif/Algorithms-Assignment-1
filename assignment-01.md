@@ -61,14 +61,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+The function finds the nth number in the Fibonacci sequence by recurssively calling itself to add the two preceding numbers before it.
   
 
 3. **Parallelism and recursion** (26 pts)
