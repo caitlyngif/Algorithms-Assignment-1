@@ -11,19 +11,21 @@ def foo(x):
         ra = foo(x-1)
         rb = foo(x-2)
         return ra + rb
+    
     pass
 
 def longest_run(mylist, key):
     current = 0
     longest = 0
     for i in range(len(mylist)):
-        if mylist[i] == key:
+        if(mylist[i] == key):
             current += 1
             if(current > longest):
                 longest = current
         else:
             current = 0
     return longest
+
     pass
 
 
@@ -51,7 +53,46 @@ def to_value(v):
         return int(v)
         
 def longest_run_recursive(mylist, key):
-    ### TODO
+    n = len(mylist)
+
+    if(n == 0):
+        return Result(0, 0, 0, False)
+    
+    if(n == 1):
+        if(mylist[0] == key):
+            return Result (1, 1, 1, True)
+        else:
+            return Result(0, 0, 0, False)
+    
+    mid = n // 2
+    leftHalf = mylist[:mid]
+    rightHalf = mylist[mid:]
+
+    L = longest_run_recursive(leftHalf, key)
+    R = longest_run_recursive(rightHalf, key)
+
+    if(L.left_size == mid): # entire left half is a run of the key
+        left_size = L.left_size + R.left_size
+    else:
+        left_size = L.left_size
+    
+    if(R.right_size == n - mid): # entire right half is a run of the key
+        right_size = R.right_size + L.right_size
+    else:
+        right_size = R.right_size
+
+    if(L.longest_size >= R.longest_size):
+        longest = L.longest_size
+    else:
+        longest = R.longest_size
+    
+    if(L.right_size + R.left_size > longest):
+        longest_size = L.right_size + R.left_size
+    else:
+        longest_size = longest
+    
+    return Result(left_size, right_size, longest_size, False)
+
     pass
 
 
