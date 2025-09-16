@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** Caitlyn Gifford
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,35 +12,32 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
-.  
-.  
-.  
-. 
+
+Yes because when c = 2 and for all n >= 1, $2^{n+1} <= c*2^n$
+
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
-.  
-.  
-.  
-.  
+
+No because using the limit test, $2^{2^n} / 2^n$ simplifies to $2^{2^n-n} goes to infinity.
+
+$2^{2^n}$ grows faster than $2^n$, so it wouldn't be upper bounded by it.
+
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
-.  
-.  
-.  
+
+No because $n^{1.01}$ is a polynomial, which eventually grows faster than any polylogarithm. 
+
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
-.  
-.  
-.  
+
+Yes. With the limit test, with $f(n) = n^{1.01}$ and $g(n) = \mathrm{log}^2 n$, the limit as n goes to infinity of $f(n) / g(n)$ is infinity, which means that f(n) is faster than g(n). $n^{1.01}$ is also a polynomial, which eventually will grow faster than a polylogarithmic. 
+
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
-.  
-.  
+
+No because $\sqrt{n}$ is a polynomial, which eventually grows faster than any polylogarithm.
+
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+
+Yes because $\sqrt{n}$ is a polynomial, which eventually grows faster than any polylogarithm. This means that the polynomial is lower-bounded by the polylogarithm.
+
 
 
 2. **SPARC to Python** (12 pts)
