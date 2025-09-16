@@ -28,7 +28,9 @@ No because $n^{1.01}$ is a polynomial, which eventually grows faster than any po
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
 
-Yes. With the limit test, with $f(n) = n^{1.01}$ and $g(n) = \mathrm{log}^2 n$, the limit as n goes to infinity of $f(n) / g(n)$ is infinity, which means that f(n) grows faster than g(n). $n^{1.01}$ is also a polynomial, which eventually will grow faster than a polylogarithmic. 
+Yes. With the limit test, with $f(n) = n^{1.01}$ and $g(n) = \mathrm{log}^2 n$, the limit as n goes to infinity of $f(n) / g(n)$ is infinity, which means that f(n) grows faster than g(n). 
+
+$n^{1.01}$ is also a polynomial, which eventually will grow faster than a polylogarithmic. 
 
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
 
