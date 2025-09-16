@@ -17,7 +17,7 @@ Yes because when c = 2 and for all n >= 1, $2^{n+1} <= c*2^n$
 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
 
-No because using the limit test, $2^{2^n} / 2^n$ simplifies to $2^{2^n-n}$ goes to infinity.
+No because using the limit test, $2^{2^n} / 2^n$ simplifies to $2^{2^n-n}$ which goes to infinity, meaning that $2^{2^n}$ grows faster than $2^n$.
 
 $2^{2^n}$ grows faster than $2^n$, so it wouldn't be upper bounded by it.
 
